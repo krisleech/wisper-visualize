@@ -1,9 +1,9 @@
 require 'wisper'
-require 'wisper/visualize/version'
-require 'wisper/visualize/debug_broadcaster'
+require 'graphviz'
 
-require 'wisper/visualize/debugger'
+require 'wisper/visualize/recording_broadcaster'
 require 'wisper/visualize/report'
+require 'wisper/visualize/version'
 
 module Wisper
   module Visualize

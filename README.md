@@ -16,6 +16,7 @@ report = Wisper::Visualize.report
 # ...
 
 report.to_pdf('/tmp/events-graph.pdf')
+report.to_png('/tmp/events-graph.png')
 ```
 
 You can also get a collection of all events published:
@@ -27,22 +28,24 @@ report.events # => [...]
 Each event has the following attributes:
 
 ```ruby
-event.publisher_class
-event.publisher_id
-
-event.subscriber_class
-event.subscriber_id
-
-event.created_at
 event.name
+event.publisher_name
+event.subscriber_name
+event.arg_names
+event.created_at
+event.frequency
+```
 
-event.arguments
+## Rspec
+
+```ruby
+around(:each) do |example|
+  report = Wisper::Visualize.report
+  example.call
+  report.to_pdf("/tmp/events-graph-#{example.metadata[:full_description]}.pdf")
+end
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/wisper-visualize/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Yes, please.
