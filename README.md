@@ -2,6 +2,8 @@
 
 Provides a graph of published [Wisper](https://github.com/krisleech/wisper) events as a PNG or PDF
 
+![example output](https://raw.githubusercontent.com/krisleech/wisper-visualize/master/output_example.png)
+
 ## Installation
 
 ```ruby
