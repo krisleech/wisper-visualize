@@ -23,7 +23,7 @@ module Wisper
       private
 
       def graph
-        GraphViz.new(:G, type: :digraph).tap do |g|
+        GraphViz.new(:G, type: :digraph, size: '500,500', ratio: 'auto').tap do |g|
           events.each do |event|
             sub_node = g.add_nodes(event.subscriber_name)
             pub_node = g.add_nodes(event.publisher_name)
