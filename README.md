@@ -1,6 +1,6 @@
 # Wisper::Visualize
 
-Provides a graph of published events as a PNG or PDF.
+Provides a graph of published [Wisper](https://github.com/krisleech/wisper) events as a PNG or PDF
 
 ## Installation
 
@@ -13,7 +13,7 @@ gem 'wisper-visualize'
 ```ruby
 report = Wisper::Visualize.report
 
-# ...
+# broadcast some events...
 
 report.to_pdf('/tmp/events-graph.pdf')
 report.to_png('/tmp/events-graph.png')
